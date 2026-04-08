@@ -6,16 +6,16 @@ def format_linter_error(error: dict) -> dict:
 "name": error["code"],
 "source": "flake8",
 }
-    pass
+    
 
 
 def format_single_linter_file(file_path: str, errors: list) -> dict:
     formatted_errors = [format_linter_error(err) for err in errors]
     status = "passed" if len(formatted_errors) == 0 else "failed"
     return {"errors": formatted_errors, "path": file_path, "status": status}
-    pass
+    
 
 
 def format_linter_report(linter_report: dict) -> list:
     return [format_single_linter_file(path, errs) for path, errs in linter_report.items()]
-    pass
+    
