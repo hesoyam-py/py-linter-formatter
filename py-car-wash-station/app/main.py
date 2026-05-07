@@ -3,9 +3,6 @@ class Car:
         self.comfort_class = comfort_class
         self.clean_mark = clean_mark
         self.brand = brand
-bmw = Car(3, 3, 'BMW')
-audi = Car(4, 9, 'Audi')
-print(bmw.clean_mark)
 
 
 class CarWashStation:
